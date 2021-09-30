@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:amez/Screens/detailScreen.dart';
 import 'package:amez/Screens/loginScreen.dart';
 import 'package:amez/Screens/notificationScreen.dart';
 import 'package:amez/Screens/profileScreen.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.notificationRoute: (context) => NotificationScreen(),
         MyRoutes.loginRoute: (context) => LoginScreen(),
         MyRoutes.registerRoute: (context) => RegisterScreen(),
+        MyRoutes.detailRoute: (context) => DetailScreen(),
       },
     );
   }

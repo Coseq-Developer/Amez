@@ -7,4 +7,5 @@ class MyRoutes {
   static String notificationRoute = '/notification';
   static String registerRoute = '/register';
   static String loginRoute = '/login';
+  static String detailRoute = '/details';
 }

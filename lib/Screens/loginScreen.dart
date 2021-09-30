@@ -19,6 +19,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  GlobalKey<FormState> formkey = GlobalKey<FormState>();
   bool _active = true;
   @override
   Widget build(BuildContext context) {
@@ -120,6 +121,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     Flexible(
                         child: TextFormField(
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return "* Required";
+                        } else if (value.length < 6) {
+                          return "Password should be atleast 6 characters";
+                        } else if (value.length > 15) {
+                          return "Password should not be greater than 15 characters";
+                        } else
+                          return null;
+                      },
                       obscureText: _active,
                       decoration: InputDecoration(
                           border: InputBorder.none,
